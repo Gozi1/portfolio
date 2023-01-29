@@ -1,0 +1,80 @@
+
+
+
+li{
+  list-style: none;
+}
+
+.Nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%; 
+}
+.Nav>svg{
+  height: 8rem;
+  
+}
+.Menu-items{
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: space-around;
+  
+}
+.Menu-items>li{
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    rgb(255, 255, 255) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  
+}
+.seleceted{
+  background-position: 0;
+}
+.Menu-items>li:after {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: relative;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.Menu-items>li:hover {
+  background-position: 0;
+ }
+.Menu-items>li:hover::after {
+  width: 80%;
+}
+.socials{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0;
+}
+
+
+.shake{
+  animation: example 1.5s linear  ;
+}
+
+
+
+@keyframes example {
+  0%   { transform: translate(20%); transform: rotate(10deg);}
+  25%  { transform: translate(-10%);transform: rotate(-10deg)}
+  50%  { transform: translate(10%);transform: rotate(10deg)}
+  75%  {transform: translate(-10%);transform: rotate(-10deg)}
+  100% {transform: translate(0%);}
+}
