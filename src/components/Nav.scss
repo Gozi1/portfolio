@@ -6,65 +6,66 @@ li{
 }
 
 .Nav{
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%; 
+  margin:  3rem;
+  display: flex;
+  justify-content: space-between;
+  
 }
 .Nav>svg{
   height: 8rem;
   
 }
-.Menu-items{
-  display: flex;
-  flex-direction: column;
-  height: 60%;
-  justify-content: space-around;
+
+
+// .Menu-items>li{
+//   background-image: linear-gradient(
+//     to right,
+//     #54b3d6,
+//     #54b3d6 50%,
+//     rgb(255, 255, 255) 50%
+//   );
+//   background-size: 200% 100%;
+//   background-position: -100%;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   transition: all 0.3s ease-in-out;
   
-}
-.Menu-items>li{
-  background-image: linear-gradient(
-    to right,
-    #54b3d6,
-    #54b3d6 50%,
-    rgb(255, 255, 255) 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-  
-}
-.seleceted{
-  background-position: 0;
-}
-.Menu-items>li:after {
-  content: '';
-  background: #54b3d6;
-  display: block;
-  position: relative;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 5px;
-  transition: all 0.3s ease-in-out;
-}
-.Menu-items>li:hover {
-  background-position: 0;
- }
-.Menu-items>li:hover::after {
-  width: 80%;
-}
+// }
+// .seleceted{
+//   background-position: 0;
+// }
+// .Menu-items>li:after {
+//   content: '';
+//   background: #54b3d6;
+//   display: block;
+//   position: relative;
+//   bottom: -5px;
+//   left: 0;
+//   width: 0;
+//   height: 5px;
+//   transition: all 0.3s ease-in-out;
+// }
+// .Menu-items>li:hover {
+//   background-position: 0;
+//  }
+// .Menu-items>li:hover::after {
+//   width: 80%;
+// }
 .socials{
   display: flex;
   flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
+  width: 10rem;
+  justify-content: space-between;
+  align-content:flex-start;
   padding: 0;
+  color :rgb(18, 105, 105)
 }
-
-
+.socials svg{
+  font-size: 1.5rem;
+}
+.socials svg:hover{
+  color :aqua
+}
 .shake{
   animation: example 1.5s linear  ;
 }

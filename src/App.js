@@ -6,10 +6,9 @@ function App() {
   return (
     <div className="App">
       <Loadingscreen/>
-      <header className="App-header">
+      <main >
         <Nav/>
-      </header>
-      
+        </main>
     </div>
   );
 }

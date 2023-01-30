@@ -4,27 +4,19 @@ import { useState } from 'react';
 import './Nav.scss'
 
 const Nav = () => {
-  const logo = document.querySelector('.logo');
-
   function addshake() {
-  logo.classList.add('shake');
+    document.querySelector('.logo').classList.add('shake');
   }
 
   function removeshake() {
-    logo.classList.remove('shake');
+    document.querySelector('.logo').classList.remove('shake');
   }
-  if(logo){
-    //find a way to make this async
-    console.log(logo);
-  logo.addEventListener('mouseover', addshake);
-  logo.addEventListener("animationend", removeshake);
-  }
-  
+
 
   return (
                 <div className='Nav'>
               <svg className='logo ' xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
-              >
+              onMouseOver ={addshake} onAnimationEnd ={removeshake}>
             <g filter="url(#filter0_d_0_1)">
             <path 
               d="M31 87.25V26H48.5V34.75H57.25V43.5H66V52.25H74.75V26H92.25V87.25H74.75V69.75H66V61H57.25V52.25H48.5V87.25H31Z" fill="#0075FF"/>
@@ -58,12 +50,7 @@ const Nav = () => {
             </filter>
 </defs>
 </svg>
-  <ul className='Menu-items'>
-    <li>About me</li>
-    <li>Projects</li>
-    <li>Hobbies</li>
-    <li>Contact</li> 
-    <li>Resume</li>
+  
     <ul className = 'socials'>
           <li className='selected'>
             <a href="https://www.instagram.com/haimgod_/">
@@ -78,7 +65,7 @@ const Nav = () => {
               <ImGithub/>
               </a></li>
         </ul>
-  </ul>
+  
 
     </div>
   )
