@@ -25,11 +25,11 @@ const Nav = () => {
             <circle 
 
 
-            cx="60" cy="56" r="53" stroke="#0075FF" stroke-width="5"/>
+            cx="60" cy="56" r="53" stroke="#0075FF" strokeWidth="5"/>
             </g>
             <defs>
-            <filter id="filter0_d_0_1" x="27" y="26" width="69.25" height="69.25" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter0_d_0_1" x="27" y="26" width="69.25" height="69.25" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset dy="4"/>
             <feGaussianBlur stdDeviation="2"/>
@@ -38,8 +38,8 @@ const Nav = () => {
             <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
             </filter>
-            <filter id="filter1_d_0_1" x="0.5" y="0.5" width="119" height="119" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter1_d_0_1" x="0.5" y="0.5" width="119" height="119" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset dy="4"/>
             <feGaussianBlur stdDeviation="2"/>

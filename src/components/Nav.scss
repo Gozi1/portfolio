@@ -21,11 +21,11 @@ li{
 //   background-image: linear-gradient(
 //     to right,
 //     #54b3d6,
-//     #54b3d6 50%,
-//     rgb(255, 255, 255) 50%
+//     #54b3d6 40%,
+//     rgb(255, 255, 255) 40%
 //   );
-//   background-size: 200% 100%;
-//   background-position: -100%;
+//   background-size: 200% 400%;
+//   background-position: -400%;
 //   -webkit-background-clip: text;
 //   -webkit-text-fill-color: transparent;
 //   transition: all 0.3s ease-in-out;
@@ -54,11 +54,11 @@ li{
 .socials{
   display: flex;
   flex-direction: row;
-  width: 10rem;
+  width: 40rem;
   justify-content: space-between;
   align-content:flex-start;
   padding: 0;
-  color :rgb(18, 105, 105)
+  color :rgb(18, 405, 405)
 }
 .socials svg{
   font-size: 1.5rem;
@@ -67,15 +67,15 @@ li{
   color :aqua
 }
 .shake{
-  animation: example 1.5s linear  ;
+  animation: jiggle 1.5s linear  ;
 }
 
 
 
-@keyframes example {
-  0%   { transform: translate(20%); transform: rotate(10deg);}
-  25%  { transform: translate(-10%);transform: rotate(-10deg)}
-  50%  { transform: translate(10%);transform: rotate(10deg)}
-  75%  {transform: translate(-10%);transform: rotate(-10deg)}
+@keyframes jiggle{
+  0%   { transform: translate(0%); transform: rotate(0deg);}
+  25%  { transform: translate(-20%);transform: rotate(-20deg)}
+  50%  { transform: translate(20%);transform: rotate(20deg)}
+  75%  {transform: translate(-20%);transform: rotate(-20deg)}
   100% {transform: translate(0%);}
 }
