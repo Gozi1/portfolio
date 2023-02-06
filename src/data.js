@@ -17,7 +17,7 @@ const data ={
   },
   "Story Creator":{
     title:'Story Creator',
-    description:'•An interactive user application where users can begin stories and/or add to in-progress stories ',
+    description:'An interactive user application where users can begin stories and/or add to in-progress stories ',
     techStack:['PostgreSQL','Express','Jquery','Scss'],
     img:'empty',
     project:true,

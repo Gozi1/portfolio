@@ -19,13 +19,13 @@ const Nav = () => {
               onMouseOver ={addshake} onAnimationEnd ={removeshake}>
             <g filter="url(#filter0_d_0_1)">
             <path 
-              d="M31 87.25V26H48.5V34.75H57.25V43.5H66V52.25H74.75V26H92.25V87.25H74.75V69.75H66V61H57.25V52.25H48.5V87.25H31Z" fill="#0075FF"/>
+              d="M31 87.25V26H48.5V34.75H57.25V43.5H66V52.25H74.75V26H92.25V87.25H74.75V69.75H66V61H57.25V52.25H48.5V87.25H31Z" fill="#EFF6EE"/>
             </g>
             <g filter="url(#filter1_d_0_1)">
             <circle 
 
 
-            cx="60" cy="56" r="53" stroke="#0075FF" strokeWidth="5"/>
+            cx="60" cy="56" r="53" stroke="#EFF6EE" strokeWidth="5"/>
             </g>
             <defs>
             <filter id="filter0_d_0_1" x="27" y="26" width="69.25" height="69.25" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">

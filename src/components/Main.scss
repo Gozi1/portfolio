@@ -1,10 +1,19 @@
+$blue-color: #3185FC;
+$white: #eff6ee;
+$dark: #02020A;
+$purple: #7209B7;
+$regularFont:'Lusitana', serif;
+$titleFont : 'Press Start 2P', cursive;
 *{
-  background-color: rgb(0, 1, 10);
+  background-color: $dark;
+  font-family: $regularFont;
+  color: $white;
 }
 a, a:hover, a:focus, a:active {
   text-decoration: none;
-  color: inherit;
+  color: $white;
 }
+
 // .App-header{
   
 //   box-sizing:border-box;
@@ -23,27 +32,30 @@ main{
   height: 85%;
   padding: 7px;
   margin: 25px;
-  background: rgb(0, 1, 10);
-  border: none;
-  text-align: center;
-  z-index: 1;
-  border-top-left-radius: 37px 140px;
-  border-top-right-radius: 23px 130px;
-  border-bottom-left-radius: 110px 19px;
-  border-bottom-right-radius: 120px 24px;
-  border: solid 3px #3f4d8f;
-  transform: rotate(-1deg);
-  box-shadow: 3px 15px 8px -10px rgb(23, 160, 64);
-  transition: all 0.13s ease-in;
+  background: $dark;
+  // border: none;
+  // text-align: center;
+  // z-index: 1;
+  // border-top-left-radius: 37px 140px;
+  // border-top-right-radius: 23px 130px;
+  // border-bottom-left-radius: 110px 19px;
+  // border-bottom-right-radius: 120px 24px;
+  // border: solid 3px $purple;
+  // transform: rotate(-1deg);
+  // box-shadow: 3px 15px 8px -10px rgb(23, 160, 64);
+  // transition: all 0.13s ease-in;
 }
-main:hover {
-  transform: translateY(-10px) rotate(1deg);
-  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
-}
+// main:hover {
+//   transform: translateY(-10px) rotate(1deg);
+//   box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+// }
 .content-div{
   display:flex;
-  justify-content: space-evenly;
-  
+  justify-content: space-between;
+  margin-left:7rem ;
+  align-items: center;
+  position: relative;
+  top:15%
 }
 // main::after,
 // main::before {
@@ -72,7 +84,7 @@ main:hover {
   width: 100%;
   height: 100%;
   z-index: 3;
-  background-color: rgb(0, 1, 10);
+  background-color: $dark;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -113,28 +125,61 @@ main:hover {
 .Menu{
   position: absolute;
   right: 5%;
-  color: aqua;
-  font-size: 3rem;
+  font-size: 2.5rem;
   cursor: pointer;
   text-align: justify;
+  
 }
 .Menu>ul > *:not(:last-child){
   display: block;
     margin-bottom: 1rem;
 }
-.Project-Menu{
-  // position: relative;
-  // left:2rem;
-  font-size: 1.5rem;
-  
-  li{ 
+.Menu li{
+  font-family:  $titleFont;
+  background-image: linear-gradient(
+      to right,
+      $purple,
+      $white 50%,
+      $white
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
     
+  }
+  .Menu li:after {
+  content: '';
+  background: $purple;
+  display: block;
+  position: relative;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.Menu li:hover {
+  background-position: 0;
+ }
+.Menu li:hover::after {
+  width: 100%;
+}
+
+.Project-Menu{
+  font-size: 1.5rem;
+  li{  
     visibility: hidden;
     height: 0;
-    transform: scale(0.8) translateX(-2rem);
-    animation: slidedown 350ms ease-out both ;
+    transform: scale(0.8) ;
+    height: 0;
+    animation: slidedown 350ms ease-out both;
     @for $i from 1 through 50 {
       &:nth-child(#{$i}) {
+        margin-bottom: 0.5rem;
+        @if $i%2 == 0 {transform:translateX(-3rem);}
+        @else { transform:translateX(3rem);}
         animation-delay: 250ms * $i;
       }
     }
@@ -153,21 +198,31 @@ main:hover {
   height: 100%;
 }
 
-.display{
-  color:aqua;
-}
+
 .project-title{
   display: flex;
+  font-family:  $titleFont;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-.display-title{
-
+.display-component{
+  text-align: left;
+  opacity: 0;
+  width: auto;
+  height: auto;
+}
+.display-component h1{
+    font-size: 3rem;
+    font-family:  $titleFont;
+}
+.display-component p{
+  font-size: 1.5rem;
 }
 .project-List{
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  padding: 0;
 }
 .project-List svg{
   font-size: 1.5rem
