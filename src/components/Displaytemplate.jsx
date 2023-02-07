@@ -1,7 +1,7 @@
 import { easeIn, easeInOut } from "framer-motion";
 import { useState,useEffect } from "react"
 const Displaytemplate = (props) => {
-  const {displayObj} = props
+  const {displayObj,color} = props
   const [showImg,setShowImg] = useState(false);
   const {title,description,techStack,img,project,github} = displayObj;
   useEffect(() => {
@@ -16,11 +16,11 @@ const Displaytemplate = (props) => {
     <article className='display-component'  >
       <h1>{title}</h1>    
       <p>{description}</p>
-      {project &&<ul className="project-List">
+      {project &&<ul className="project-List" style={{backgroundColor: `${color}`}}>
       {techStack.map((value, index) => {
-        return <li key={index}>{value}</li>
+        return <li style={{backgroundColor: `${color}`}} key={index}>{value}</li>
       })}
-      {github && <a className = 'gitRef' href={github? github:''}>Github</a>}
+      {github && <a className = 'gitRef' style={{backgroundColor: `${color}`}} href={github? github:''}>Github</a>}
     </ul>
      }
      

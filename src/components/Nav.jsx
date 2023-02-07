@@ -14,8 +14,8 @@ const Nav = () => {
 
 
   return (
-                <div className='Nav'>
-              <svg className='logo ' xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
+                <div className='Nav' id="change">
+              <svg className='logo  ' id="change" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
               onMouseOver ={addshake} onAnimationEnd ={removeshake}>
             <g filter="url(#filter0_d_0_1)">
             <path 
@@ -51,18 +51,18 @@ const Nav = () => {
 </defs>
 </svg>
   
-    <ul className = 'socials'>
+    <ul className = 'socials ' id="change">
           <li className='selected'>
             <a href="https://www.instagram.com/haimgod_/">
-              <ImInstagram/>
+              <ImInstagram id="change"/>
               </a></li>
           <li>
             <a href="https://www.linkedin.com/in/ngozi-nwabiani-13652a217/">
-              <ImLinkedin2/>
+              <ImLinkedin2 id="change"/>
               </a></li>
           <li>
             <a href="https://github.com/Gozi1">
-              <ImGithub/>
+              <ImGithub id="change"/>
               </a></li>
         </ul>
   

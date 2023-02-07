@@ -1,11 +1,11 @@
 $blue-color: #3185FC;
 $white: #eff6ee;
-$dark: #02020A;
+$cadet: #252555;
 $purple: #7209B7;
 $regularFont:'Lusitana', serif;
-$titleFont : 'Press Start 2P', cursive;
+
 *{
-  background-color: $dark;
+  background-color: $cadet;
   font-family: $regularFont;
   color: $white;
 }
@@ -32,27 +32,12 @@ main{
   height: 85%;
   padding: 7px;
   margin: 25px;
-  background: $dark;
-  // border: none;
-  // text-align: center;
-  // z-index: 1;
-  // border-top-left-radius: 37px 140px;
-  // border-top-right-radius: 23px 130px;
-  // border-bottom-left-radius: 110px 19px;
-  // border-bottom-right-radius: 120px 24px;
-  // border: solid 3px $purple;
-  // transform: rotate(-1deg);
-  // box-shadow: 3px 15px 8px -10px rgb(23, 160, 64);
-  // transition: all 0.13s ease-in;
 }
-// main:hover {
-//   transform: translateY(-10px) rotate(1deg);
-//   box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
-// }
+
 .content-div{
   display:flex;
   justify-content: space-between;
-  margin-left:7rem ;
+  margin-left:3rem ;
   align-items: center;
   position: relative;
   top:15%
@@ -84,7 +69,6 @@ main{
   width: 100%;
   height: 100%;
   z-index: 3;
-  background-color: $dark;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +109,7 @@ main{
 .Menu{
   position: absolute;
   right: 5%;
-  font-size: 2.5rem;
+  font-size: 3rem;
   cursor: pointer;
   text-align: justify;
   
@@ -135,40 +119,32 @@ main{
     margin-bottom: 1rem;
 }
 .Menu li{
-  font-family:  $titleFont;
-  background-image: linear-gradient(
-      to right,
-      $purple,
-      $white 50%,
-      $white
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-    
-  }
-  .Menu li:after {
-  content: '';
-  background: $purple;
-  display: block;
   position: relative;
-  bottom: -5px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  
+  }
+.Menu li::after {
+  content: '';
+  position: absolute;
+  width: 45%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
   left: 0;
-  width: 0;
-  height: 5px;
-  transition: all 0.5s ease-in-out;
-}
-.Menu li:hover {
-  background-position: 0;
- }
-.Menu li:hover::after {
-  width: 100%;
+  background-color: #A5A7B6;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
+.Menu li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+} 
+
+
 .Project-Menu{
-  font-size: 1.5rem;
+  font-size: 2rem;
   li{  
     visibility: hidden;
     height: 0;
@@ -201,7 +177,7 @@ main{
 
 .project-title{
   display: flex;
-  font-family:  $titleFont;
+  font-family:  $regularFont;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
@@ -209,24 +185,50 @@ main{
 .display-component{
   text-align: left;
   opacity: 0;
-  width: auto;
-  height: auto;
+  
 }
 .display-component h1{
-    font-size: 3rem;
-    font-family:  $titleFont;
+    font-size: 4rem;
+    font-family:  $regularFont;
 }
+
 .display-component p{
   font-size: 1.5rem;
+  width:50vw;
 }
 .project-List{
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   padding: 0;
+  li{
+    margin-right: 2rem;
+    padding-bottom:3px;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, #fff, #000);
+    border-radius: 10px;
+    border-right: 0;
+    border-left: 0;
+    border-top:0;
+  }
+  li:hover{
+    border-image-source: linear-gradient(to right, #fff, #000);
+  }
 }
-.project-List svg{
-  font-size: 1.5rem
+.gitRef{
+  padding-bottom:3px;
+  border: 5px solid white;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(to left, #fff, #000);
+  // border-radius: 10px;
+  border-right: 0;
+  border-left: 0;
+  border-top:0;
+  
 }
-.project-List svg:hover{
-  color:antiquewhite
+.gitRef:hover{
+  border-image-source: none;
+  transform: scale(1.3);
 }

@@ -30,9 +30,28 @@ li{
   margin: 0 1rem;
   font-size: 1.5rem;
 }
-.socials svg:hover{
-  color :aqua
+.socials li:hover{
+  transform: scale(1.2);
+  }
+.socials li:nth-child(1):hover{
+  svg{
+    fill: #ded1c1
+  }
+    
 }
+.socials li:nth-child(2):hover{
+  svg{
+    fill: #0072b1;
+  }
+    
+} 
+.socials li:nth-child(3):hover{
+  svg{
+    fill: $white;
+  }
+    
+}   
+
 .shake{
   animation: jiggle 1.5s linear  ;
 }
