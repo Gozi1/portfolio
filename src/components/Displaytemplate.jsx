@@ -13,19 +13,19 @@ const Displaytemplate = (props) => {
     
   },[props])
   return (
-    <article className='display-component'  >
+    <article className='display-component'   >
+      {/* {...(img ? {style: {backgroundImage: 'url(src/images/walle.jpg)'}} : ``)}  */}
       <h1>{title}</h1>    
       <p>{description}</p>
-      {project &&<ul className="project-List" style={{backgroundColor: `${color}`}}>
+      {project &&<ul className="project-List" >
       {techStack.map((value, index) => {
-        return <li style={{backgroundColor: `${color}`}} key={index}>{value}</li>
+        return <li  key={index}>{value}</li>
       })}
-      {github && <a className = 'gitRef' style={{backgroundColor: `${color}`}} href={github? github:''}>Github</a>}
+      {github && <a className = 'gitRef'  href={github? github:''}>Github</a>}
     </ul>
      }
-     
-
-    {/* {showImg && <img src={displayObj.img}  alt ={displayObj.title}/>} */}
+    {img && <div className="img-box" style={{  
+  backgroundImage: `url(${img})`}}  alt ={title}/>}
     </article>
     
   )

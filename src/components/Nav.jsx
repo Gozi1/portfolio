@@ -3,7 +3,7 @@ import { ImGithub,ImInstagram,ImLinkedin2,ImMenu,ImCross} from "react-icons/im";
 import { useState } from 'react';
 import './Nav.scss'
 
-const Nav = () => {
+const Nav = (props) => {
   function addshake() {
     document.querySelector('.logo').classList.add('shake');
   }
@@ -15,7 +15,8 @@ const Nav = () => {
 
   return (
                 <div className='Nav' id="change">
-              <svg className='logo  ' id="change" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
+              <svg  onClick={()=>{
+          props.setCurrentDisplay("About")}}className='logo  ' id="change" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
               onMouseOver ={addshake} onAnimationEnd ={removeshake}>
             <g filter="url(#filter0_d_0_1)">
             <path 

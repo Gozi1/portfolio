@@ -5,7 +5,7 @@ $purple: #7209B7;
 $regularFont:'Lusitana', serif;
 
 *{
-  background-color: $cadet;
+  background-color: transparent;
   font-family: $regularFont;
   color: $white;
 }
@@ -14,25 +14,16 @@ a, a:hover, a:focus, a:active {
   color: $white;
 }
 
-// .App-header{
-  
-//   box-sizing:border-box;
-//   border-radius: 8px;
-//   background: radial-gradient(circle at 100% 100%, rgb(0, 1, 10) 0, rgb(0, 1, 10) 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
-//               radial-gradient(circle at 0 100%, rgb(0, 1, 10) 0, rgb(0, 1, 10) 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
-//               radial-gradient(circle at 100% 0, rgb(0, 1, 10) 0, rgb(0, 1, 10) 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
-//               radial-gradient(circle at 0 0, rgb(0, 1, 10) 0, rgb(0, 1, 10) 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
-//               linear-gradient(rgb(0, 1, 10), rgb(0, 1, 10)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
-//               linear-gradient(rgb(0, 1, 10), rgb(0, 1, 10)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
-//               linear-gradient(147deg, transparent 25%, #48abe0 25%, #48abe0 50%, transparent 50%, transparent 75%, #48abe0 75%)
-// }
+
 main{
   position: absolute;
   width: 90%;
   height: 85%;
   padding: 7px;
   margin: 25px;
+ 
 }
+
 
 .content-div{
   display:flex;
@@ -42,27 +33,7 @@ main{
   position: relative;
   top:15%
 }
-// main::after,
-// main::before {
-//   position: absolute;
-//   width: 33px;
-//   height: 20px;
-//   content: "";
-// }
-// main::before {
-//   left: 0;
-//   top: 0;
-//   border-radius: 3px;
-//   border-left: 3px solid white;
-//   border-top: 3px solid white;
-//  }
-//  main::after {
-//   right: 0;
-//   bottom: 0;
-//   border-radius: 3px;
-//   border-right: 3px solid white;
-//   border-bottom: 3px solid white;
-//  }
+
 
 .loading{
   position: fixed;
@@ -70,6 +41,7 @@ main{
   height: 100%;
   z-index: 3;
   display:flex;
+  background-color: $cadet;
   justify-content: center;
   align-items: center;
   animation: disappear 0.3s ease-in forwards;
@@ -105,8 +77,10 @@ main{
     z-index: -1;
     content:'';
   }
+  
 }
 .Menu{
+  // background-image: url('../images/walle.jpg');
   position: absolute;
   right: 5%;
   font-size: 3rem;
@@ -140,11 +114,13 @@ main{
 .Menu li:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+ 
 } 
 
 
 .Project-Menu{
   font-size: 2rem;
+  margin-left: 1rem;
   li{  
     visibility: hidden;
     height: 0;
@@ -185,20 +161,40 @@ main{
 .display-component{
   text-align: left;
   opacity: 0;
-  
-}
-.display-component h1{
+  position: relative;
+  h1{
     font-size: 4rem;
     font-family:  $regularFont;
+    background: transparent;
 }
 
-.display-component p{
+p{
   font-size: 1.5rem;
   width:50vw;
+  white-space: pre-wrap;
+  text-justify: inter-word;
+  background: transparent;
 }
+.img-box{
+  width: 20rem;
+  height:24rem;
+  filter: grayscale(50%) ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  filter: grayscale(110%);
+  opacity: 0.35;
+  top:10%;
+  right:5%;
+  border-radius: 13% 87% 15% 85% / 71% 20% 80% 29% ;
+}
+}
+
+
+
 .project-List{
   display: flex;
-  // justify-content: space-between;
   padding: 0;
   li{
     margin-right: 2rem;
