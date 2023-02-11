@@ -51,6 +51,14 @@ const Menu = (props) => {
           setCurrentDisplay("Hobbies")
           setColor('#79835D')}} 
           >Hobbies</li>
+        <li onClick={()=>{
+          setCurrentDisplay("Contact")
+          setColor('#160C28')}} >Contact</li>
+          <li>
+            <a href="https://flowcv.com/resume/jbvfgcke9s"
+            target="_blank">
+              Resume</a></li>
+
       </ul>
     </div>
   )

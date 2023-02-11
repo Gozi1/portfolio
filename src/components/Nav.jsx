@@ -54,15 +54,18 @@ const Nav = (props) => {
   
     <ul className = 'socials ' id="change">
           <li className='selected'>
-            <a href="https://www.instagram.com/haimgod_/">
+            <a href="https://www.instagram.com/haimgod_/" 
+            target="_blank">
               <ImInstagram id="change"/>
               </a></li>
           <li>
-            <a href="https://www.linkedin.com/in/ngozi-nwabiani-13652a217/">
+            <a href="https://www.linkedin.com/in/ngozi-nwabiani-13652a217/"
+            target="_blank">
               <ImLinkedin2 id="change"/>
               </a></li>
           <li>
-            <a href="https://github.com/Gozi1">
+            <a href="https://github.com/Gozi1"
+            target="_blank">
               <ImGithub id="change"/>
               </a></li>
         </ul>

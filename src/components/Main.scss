@@ -31,7 +31,8 @@ main{
   margin-left:3rem ;
   align-items: center;
   position: relative;
-  top:15%
+  height: 50%;
+  top:10%
 }
 
 
@@ -80,13 +81,9 @@ main{
   
 }
 .Menu{
-  // background-image: url('../images/walle.jpg');
-  position: absolute;
-  right: 5%;
   font-size: 3rem;
   cursor: pointer;
-  text-align: justify;
-  
+  text-align: left;
 }
 .Menu>ul > *:not(:last-child){
   display: block;
@@ -172,8 +169,9 @@ p{
   font-size: 1.5rem;
   width:50vw;
   white-space: pre-wrap;
-  text-justify: inter-word;
   background: transparent;
+}
+
 }
 .img-box{
   width: 20rem;
@@ -189,9 +187,85 @@ p{
   right:5%;
   border-radius: 13% 87% 15% 85% / 71% 20% 80% 29% ;
 }
+.contact{
+  opacity: 0;
+  position: relative;
+  h1{
+    font-size: 4rem;
+    font-family:  $regularFont;
+    background: transparent;
 }
+p{
+  font-size: 1.2rem;
+  width: 50vw;
+  white-space: pre-wrap;
+}
+}
+.contact-form{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  
+  input{
+    width: 50vw;
+    margin-bottom:1.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom:1px $white solid;
 
+  }
+  input:focus {
+    outline: none;
+    animation: colourChanger 4s ease-in infinite;
+  }
+  textarea{
+    width: 50vw;
+    font-size: 1.5rem;
+    margin-bottom:1rem;
+    border: none;
+    border-bottom:1px $white solid;
+  }
+  textarea:focus {
+    outline: none ;
+    animation: colourChanger 5s linear infinite;
+  }
+  button{
+    background-color:$cadet;
+    width: 15rem;
+    height: 2rem;
+    border: none;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+  }
+}
+@keyframes colourChanger {
+  0%{
+    border-bottom:3px #3640FC solid;
+   
+  }
+  20%{
+    border-bottom:3px #334195 solid;
+  }
+  40%{
+    border-bottom:3px #647AA3 solid;
+  }
+  60%{
+    border-bottom:3px #95B2B0 solid;
+  }
+  80%{
+    border-bottom:3px #C6EBBE solid;
+  }
+  100%{
+    border-bottom:3px #3640FC solid;
+  }
 
+}
 
 .project-List{
   display: flex;
