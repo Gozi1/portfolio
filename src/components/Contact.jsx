@@ -1,4 +1,4 @@
-import { easeInOut } from 'framer-motion';
+
 import React from 'react'
 import { useEffect } from 'react';
 import {BiPaperPlane} from 'react-icons/bi'
@@ -8,7 +8,7 @@ const Contact = () => {
     const display = document.querySelector('.contact');
     
     display.style.opacity=0;
-    display.animate([{opacity:0},{opacity:1}],{duration: 500,delay:500,"timing-function":easeInOut , "fill":"both"})
+    display.animate([{opacity:0},{opacity:1}],{duration: 500,delay:500,"timing-function":'easeInOut' , "fill":"both"})
     
   },[])
   return (
