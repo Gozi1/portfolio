@@ -343,9 +343,7 @@ footer{
   }
   .display-component{
     padding-left: 2rem;
-    ::-webkit-scrollbar {
-      -webkit-appearance: none;
-  }
+    overflow-y: visible;
     p{
       width: 90%;
     }
