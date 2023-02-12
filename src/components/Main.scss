@@ -330,13 +330,11 @@ footer{
     margin: 0;
     padding: 0;
     position: static;
-    overflow-y: visible;
   }
   
   .content-div{
     flex-direction: column;
     margin: 0;
-    overflow-y: visible;
   }
   footer{
     position: static;
@@ -354,10 +352,8 @@ footer{
   }
   .project-List{
     flex-wrap: wrap;
-    overflow-y: visible;
   }
   .contact{
-    overflow-y: visible;
     padding-left: 2rem;
     p{
       width: 90%;
@@ -368,8 +364,5 @@ footer{
     input{
       width: 70vw;
     }
-  }
-  .Menu{
-    overflow-y: visible;
   }
 }
