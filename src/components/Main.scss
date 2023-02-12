@@ -177,6 +177,7 @@ p{
 .img-box{
   width: 20rem;
   height:24rem;
+  z-index: -1;
   filter: grayscale(50%) ;
   background-position: center;
   background-size: cover;
@@ -246,8 +247,12 @@ p{
     }
   }
   button:hover{
-    transform: translateY(-3px);
+    transform: translateY(-3px) translateX(3px);
     box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+    background-color:#000;
+    svg{
+      fill:$white;
+    }
   }
 }
 @keyframes colourChanger {
@@ -314,15 +319,60 @@ footer{
   bottom:3%;
   right:50%
 }
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $white;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: $white;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: $white;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: $white;
+// ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+//   color: #E0E1E4;
+// }
+// ::-moz-placeholder { /* Firefox 19+ */
+//   color: #E0E1E4;
+// }
+// :-ms-input-placeholder { /* IE 10+ */
+//   color: #E0E1E4;
+// }
+// :-moz-placeholder { /* Firefox 18- */
+//   color: #E0E1E4;
+// }
+@media (max-width: 900px) {
+ *{
+  overflow-x: hidden;
+ }
+  main{
+    width:100vw;
+    height:max-content ;
+    margin: 0;
+    padding: 0;
+    position: static;
+  }
+  
+  .content-div{
+    flex-direction: column;
+    margin: 0;
+  }
+  footer{
+    position: static;
+    margin-top: 3rem;
+    margin-left: 70%;
+
+    margin-bottom: 10px;
+  }
+  .display-component{
+    padding-left: 2rem;
+    p{
+      width: 90%;
+    }
+  }
+  .project-List{
+    flex-wrap: wrap;
+  }
+  .contact{
+    padding-left: 2rem;
+    p{
+      width: 90%;
+    }
+    textarea{
+      width: 70vw;
+    }
+    input{
+      width: 70vw;
+    }
+  }
 }

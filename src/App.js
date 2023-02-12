@@ -11,11 +11,20 @@ function App() {
   const [currentDisplay,setCurrentDisplay] =  useState("About");
   const [color,setColor] = useState('#252555')
   function changeColor(){
-    const randomNum =  Math.round(Math.random() * (6 - 1)) + 1;
+    //function to randomize the color and make sure the previos color is not the new random number.
     const colors = ['#160C28','#4E1404','#1B190E','#121317','#1c0e0c','#252555']
-    setColor(colors[randomNum-1]); 
-    console.log(color)
+    const randomNum =()=>{ 
+      
+      let randomNumber = Math.floor(Math.random() * 5);
+      let prevNumber = colors.indexOf(color);
+      while (randomNumber === prevNumber) {
+      randomNumber = Math.floor(Math.random() * 6);
+    }
+    return randomNumber;
+    }
+    setColor(colors[randomNum()]); 
   }
+    
   useEffect(()=>{
     document.querySelector('*').style.backgroundColor = color
   },[])
@@ -23,11 +32,23 @@ function App() {
     <div className="App " >
       <Loadingscreen/>
       <main >
-        <Nav setCurrentDisplay = {setCurrentDisplay} changeColor ={changeColor}/>
+        <Nav currentDisplay = 
+        {currentDisplay}  
+        setCurrentDisplay = {setCurrentDisplay} 
+        changeColor ={changeColor}/>
         <div className="content-div " >
-        {currentDisplay === 'Contact'? <Contact/>:<Displaytemplate displayObj = {data[currentDisplay]} color ={color}/>}
-        
-        <Menu setCurrentDisplay = {setCurrentDisplay} changeColor ={changeColor} color={color}/>
+        {
+        currentDisplay === 'Contact'
+        ? 
+        <Contact/>
+        :<Displaytemplate 
+        displayObj = {data[currentDisplay]} 
+        color ={color}/>}
+        <Menu 
+        currentDisplay = {currentDisplay} 
+        setCurrentDisplay = {setCurrentDisplay} 
+        changeColor ={changeColor} 
+        color={color}/>
         </div>
         </main> 
         <footer>© Ngozi Nwabiani 2023</footer>

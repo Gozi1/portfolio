@@ -4,6 +4,9 @@ import { useState } from 'react';
 import './Nav.scss'
 
 const Nav = (props) => {
+
+  const {currentDisplay,setCurrentDisplay,changeColor} = props;
+
   function addshake() {
     document.querySelector('.logo').classList.add('shake');
   }
@@ -16,9 +19,13 @@ const Nav = (props) => {
   return (
                 <div className='Nav' id="change">
               <svg  onClick={()=>{
-          props.setCurrentDisplay("About")
-        props.changeColor()}} className='logo  ' id="change" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
-              onMouseOver ={addshake} onAnimationEnd ={removeshake}>
+                      setCurrentDisplay("About")
+                      if(currentDisplay !== 'About'){
+                      changeColor()
+                      }
+                      }} className='logo  ' id="change" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
+                    onMouseOver ={addshake} 
+                    onAnimationEnd ={removeshake}>
             <g filter="url(#filter0_d_0_1)">
             <path 
               d="M31 87.25V26H48.5V34.75H57.25V43.5H66V52.25H74.75V26H92.25V87.25H74.75V69.75H66V61H57.25V52.25H48.5V87.25H31Z" fill="#EFF6EE"/>

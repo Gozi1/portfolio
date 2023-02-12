@@ -15,7 +15,6 @@ li{
 }
 .Nav>svg{
   height: 8rem;
-  
 }
 
 .socials{
@@ -64,4 +63,19 @@ li{
   50%  { transform: translate(20%);transform: rotate(20deg)}
   75%  {transform: translate(-20%);transform: rotate(-20deg)}
   100% {transform: translate(0%);}
+}
+@media (max-width: 900px) {
+.Nav{
+  overflow: hidden;
+  margin:  3rem 0;
+  width: 100%;
+  align-items: center;
+  .socials{
+    overflow-y: hidden;
+    margin: 0;
+    height: max-content;
+    padding: 1rem;
+    
+  }
+}
 }

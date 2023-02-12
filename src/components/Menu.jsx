@@ -1,15 +1,20 @@
-import { easeIn, easeInOut } from "framer-motion"
+
 import { useState,useEffect } from "react"
 import './Main.scss'
 
 
 const Menu = (props) => {
   const [drop,setDrop] =  useState(false)
-  const {setCurrentDisplay,changeColor,color} = props
+  const {setCurrentDisplay,changeColor,color,currentDisplay} = props
   
   useEffect(()=>{ 
     
-    document.querySelector('*').animate([{backgroundColor:color}],{duration: 750,"timing-function": easeIn, "fill":"forwards"})
+    document.querySelector('*').animate([{backgroundColor:color}],{duration: 750,"timing-function": 'easeIn', "fill":"forwards"})
+    if(window.innerWidth <= 900){
+      window.scrollTo({top:0,
+                      left:0,
+                      behavior: 'smooth'})
+    }
         },[color]);
   
   
@@ -18,7 +23,9 @@ const Menu = (props) => {
       <ul>
         <li onClick={()=>{
           setCurrentDisplay("About");
-          changeColor()
+          if(currentDisplay !== 'About'){
+            changeColor()
+            }
           }}>
             About
             </li>
@@ -29,34 +36,47 @@ const Menu = (props) => {
           {drop && 
         <div className='Project-Menu '  >
           <li onClick={()=>{
-            setCurrentDisplay("Story Creator")
-            changeColor()
+            setCurrentDisplay("Story Creator");
+            if(currentDisplay !== 'Story Creator'){
+              changeColor()
+              }
             }} 
           >
             Story Creator</li>
           <li onClick={()=>{
             setCurrentDisplay("Tiny App")
-            changeColor()
+            if(currentDisplay !== 'Tiny App'){
+              changeColor()
+              }
           }} 
             >
               Tiny App</li>
           <li onClick={()=>{
             setCurrentDisplay("Mapping RC Car")
-            changeColor()
+            if(currentDisplay !== 'Mapping RC Car'){
+              changeColor()
+              }
           }} 
             >
               Mapping RC car</li>
           </div>}
         <li onClick={()=>{
           setCurrentDisplay("Hobbies")
-          changeColor()}} 
-          >Hobbies</li>
+          if(currentDisplay !== 'Hobbies'){
+            changeColor()
+            }
+        }} >
+          Hobbies</li>
         <li onClick={()=>{
           setCurrentDisplay("Contact")
-          changeColor()}} >Contact</li>
+          if(currentDisplay !== 'Contact'){
+            changeColor()
+            }
+          }}>
+            Contact</li>
           <li>
             <a href="https://flowcv.com/resume/jbvfgcke9s"
-            target="_blank">
+              target="_blank">
               Resume</a></li>
 
       </ul>
