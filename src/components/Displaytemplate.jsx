@@ -1,6 +1,6 @@
 import {useEffect } from "react"
 const Displaytemplate = (props) => {
-  const {displayObj,color} = props
+  const {displayObj} = props
   const {title,description,techStack,img,project,github} = displayObj;
   useEffect(() => {
     
