@@ -16,7 +16,8 @@ const Nav = (props) => {
   return (
                 <div className='Nav' id="change">
               <svg  onClick={()=>{
-          props.setCurrentDisplay("About")}}className='logo  ' id="change" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
+          props.setCurrentDisplay("About")
+        props.changeColor()}} className='logo  ' id="change" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" 
               onMouseOver ={addshake} onAnimationEnd ={removeshake}>
             <g filter="url(#filter0_d_0_1)">
             <path 

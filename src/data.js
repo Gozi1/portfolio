@@ -12,14 +12,14 @@ const data ={
   },
   "Mapping RC Car":{
     title:'Mapping RC car',
-    description:'An ardunio based rc car that mapping its environment',
+    description:"An Arduino RC car with a HC-SR04 and NRF24L01 can map surroundings, navigate autonomously and be controlled remotely. It's a versatile and intelligent device for navigation and mapping.",
     techStack:['Processing','NRF24L01','HC-SR04'],
     img: 'https://media3.giphy.com/media/W1lu77FtX90DWp5Ay1/giphy.gif?cid=ecf05e47gsn4xyguxgowrlz3t02dw4c6cnkdx5spg9m2wf6r&rid=giphy.gif&ct=g',
     project:true
   },
   "Story Creator":{
     title:'Story Creator',
-    description:'An interactive user application where users can begin stories and/or add to in-progress stories ',
+    description:'An app that lets you write a story and lets other people contribute to that story. Users that created a story can select which contribution is worthy to the next part of the story, and reject all others.',
     techStack:['PostgreSQL','Express','Jquery','Scss'],
     img:'https://media1.giphy.com/media/xT77Y1T0zY1gR5qe5O/giphy.gif?cid=ecf05e47f8mjlcyo73l2qqrqactw0ukvshawey38ytcbmctt&rid=giphy.gif&ct=g',
     project:true,

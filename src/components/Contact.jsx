@@ -14,13 +14,13 @@ const Contact = () => {
   return (
     <div className='contact'>
     <h1>Contact</h1>
-    <p>If you have any other requests or questions, please don’t hesitate to use the form.</p>
+    <p>If you have any requests or questions, please don’t hesitate to use the form.</p>
     <br/>
     <form className='contact-form' action="https://api.slapform.com/splVOl1Zv" method="post">
-           <input type="text"   placeholder="Name" name="name"  required/>
-           <input type="email"   placeholder="E-mail" name="slap_replyto"  required/>
-           <input type="Subject"   placeholder="Subject" name="slap_subject" required/>
-       <textarea rows="5" placeholder="Message" name="message" required></textarea>
+           <input type="text"   placeholder="Who are you?" name="name"  required/>
+           <input type="email"   placeholder="What's your email?" name="slap_replyto"  required/>
+           <input type="Subject"   placeholder="What the topic?" name="slap_subject" required/>
+       <textarea rows="3" placeholder="Tell me more about it." name="message" required></textarea>
        <button id="submit" type="submit" value="SEND">     
            <BiPaperPlane/> 
        </button>
