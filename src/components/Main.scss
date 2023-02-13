@@ -47,7 +47,7 @@ main{
   justify-content: center;
   align-items: center;
   animation: disappear 0.3s ease-in forwards;
-  animation-delay: 5s;
+  animation-delay: 3.5s;
 }
 
 .loading svg circle{
@@ -59,7 +59,7 @@ main{
   opacity: 0;
   transform-origin: center center;
   transform:scale(0.6,0.6);
-  animation: appearN 1s linear forwards;
+  animation: appearN 0.75s ease-in forwards;
   animation-delay: 2s;
 }
 @keyframes circleAppear {
@@ -306,7 +306,8 @@ p{
   border-right: 0;
   border-left: 0;
   border-top:0;
-  
+  display: flex;
+  align-items: center;
 }
 .gitRef:hover{
   border-image-source: none;

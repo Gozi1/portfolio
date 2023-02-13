@@ -12,7 +12,7 @@ function App() {
   const [color,setColor] = useState('#252555')
   function changeColor(){
     //function to randomize the color and make sure the previos color is not the new random number.
-    const colors = ['#160C28','#4E1404','#1B190E','#121317','#1c0e0c','#252555']
+    const colors = ['#160C28','#2F4B39','#1B190E','#121317','#1c0e0c','#252555']
     const randomNum =()=>{ 
       
       let randomNumber = Math.floor(Math.random() * 5);

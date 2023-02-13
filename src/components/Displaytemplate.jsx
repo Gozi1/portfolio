@@ -1,4 +1,5 @@
 import {useEffect } from "react"
+import {RxExternalLink} from 'react-icons/rx'
 const Displaytemplate = (props) => {
   const {displayObj} = props
   const {title,description,techStack,img,project,github} = displayObj;
@@ -19,7 +20,7 @@ const Displaytemplate = (props) => {
       {techStack.map((value, index) => {
         return <li  key={index}>{value}</li>
       })}
-      {github && <a className = 'gitRef'  href={github? github:''}>Github</a>}
+      {github && <a className = 'gitRef'  href={github? github:''}>Github<RxExternalLink/></a>}
     </ul>
      }
     {img && <div className="img-box" style={{  
