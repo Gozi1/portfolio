@@ -1,6 +1,7 @@
 import {useEffect } from "react"
-import {RxExternalLink} from 'react-icons/rx'
+
 const Displaytemplate = (props) => {
+
   const {displayObj} = props
   const {title,description,techStack,img,project,github} = displayObj;
   useEffect(() => {
@@ -12,19 +13,27 @@ const Displaytemplate = (props) => {
     
   },[props])
   return (
-    <article className='display-component'   >
-      {/* {...(img ? {style: {backgroundImage: 'url(src/images/walle.jpg)'}} : ``)}  */}
+    <article className='display-component'>
+
       <h1>{title}</h1>    
+
       <p>{description}</p>
-      {project &&<ul className="project-List" >
+
+      {project &&<ul className="project-List">
+
       {techStack.map((value, index) => {
+
         return <li  key={index}>{value}</li>
       })}
-      {github && <a className = 'gitRef'  href={github? github:''}>Github<RxExternalLink/></a>}
+
+      {github && <a className = 'gitRef'  href={github? github:''}>View Github</a>}
+
     </ul>
      }
+    
     {img && <div className="img-box" style={{  
   backgroundImage: `url(${img})`}}  alt ={title}/>}
+    
     </article>
     
   )
