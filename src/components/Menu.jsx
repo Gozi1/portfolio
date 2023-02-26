@@ -21,7 +21,8 @@ const Menu = (props) => {
   return (
     <div className='Menu ' >
       <ul>
-        <li onClick={()=>{
+        <li 
+          onClick={()=>{
           setCurrentDisplay("About");
           if(currentDisplay !== 'About'){
             changeColor()
@@ -29,56 +30,69 @@ const Menu = (props) => {
           }}>
             About
             </li>
-        <li onClick={()=>{
+        <li 
+          onClick={()=>{
           setDrop(!drop)
-          }}>Projects
+          }}
+          >
+            Projects
           </li>
           {drop && 
-        <div className='Project-Menu '  >
-          <li onClick={()=>{
-            setCurrentDisplay("Story Creator");
-            if(currentDisplay !== 'Story Creator'){
-              changeColor()
+          <div className='Project-Menu '>
+            <li onClick={()=>{
+              setCurrentDisplay("Story Creator");
+              if(currentDisplay !== 'Story Creator'){
+                changeColor()
               }
             }} 
           >
-            Story Creator</li>
-          <li onClick={()=>{
-            setCurrentDisplay("Tiny App")
-            if(currentDisplay !== 'Tiny App'){
-              changeColor()
+            Story Creator
+            </li>
+            <li 
+              onClick={()=>{
+              setCurrentDisplay("Tiny App")
+              if(currentDisplay !== 'Tiny App'){
+                changeColor()
               }
-          }} 
+            }} 
             >
-              Tiny App</li>
-          <li onClick={()=>{
-            setCurrentDisplay("Mapping RC Car")
-            if(currentDisplay !== 'Mapping RC Car'){
-              changeColor()
-              }
-          }} 
+            Tiny App
+            </li>
+            <li onClick={()=>{
+              setCurrentDisplay("Interview Scheduler")
+              if(currentDisplay !== 'Interview Scheduler'){
+                changeColor()
+                }
+            }} 
             >
-              Mapping RC car</li>
+            Interview Scheduler
+            </li>
           </div>}
-        <li onClick={()=>{
+
+        <li 
+          onClick={()=>{
           setCurrentDisplay("Hobbies")
           if(currentDisplay !== 'Hobbies'){
             changeColor()
             }
-        }} >
-          Hobbies</li>
-        <li onClick={()=>{
+          }} >
+          Hobbies
+          </li>
+        <li 
+          onClick={()=>{
           setCurrentDisplay("Contact")
           if(currentDisplay !== 'Contact'){
             changeColor()
             }
-          }}>
-            Contact</li>
-          <li>
-            <a href="https://flowcv.com/resume/jbvfgcke9s"
+            }}>
+            Contact
+            </li>
+        <li>
+          <a href="https://flowcv.com/resume/jbvfgcke9s"
               target="_blank">
-              Resume</a></li>
-
+              Resume
+              </a>
+              </li>
       </ul>
     </div>
   )

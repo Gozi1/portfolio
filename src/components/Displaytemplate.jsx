@@ -3,7 +3,7 @@ import {useEffect } from "react"
 const Displaytemplate = (props) => {
 
   const {displayObj} = props
-  const {title,description,techStack,img,project,github} = displayObj;
+  const {title,description,techStack,img,project,github,site} = displayObj;
   useEffect(() => {
     
     const display = document.querySelector('.display-component');
@@ -26,8 +26,8 @@ const Displaytemplate = (props) => {
         return <li  key={index}>{value}</li>
       })}
 
-      {github && <a className = 'gitRef'  href={github? github:''}>View Github</a>}
-
+      {github && <a className = 'gitRef'  href={github}>View Github</a>}
+      {site && <a className = 'siteRef'  href={site}>View Site</a>}
     </ul>
      }
     

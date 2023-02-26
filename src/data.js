@@ -17,6 +17,15 @@ const data ={
     img: 'https://media3.giphy.com/media/W1lu77FtX90DWp5Ay1/giphy.gif?cid=ecf05e47gsn4xyguxgowrlz3t02dw4c6cnkdx5spg9m2wf6r&rid=giphy.gif&ct=g',
     project:true
   },
+  "Interview Scheduler":{
+    title:'Interview Scheduler',
+    description:"A react app that creates a simulation of a project that allows a student to make appointments with a mentor.It is made in conjuction with a scheduler api.",
+    techStack:['React','Sass','PSQL','Jest','Cypress'],
+    img: 'https://media2.giphy.com/media/AR1auiuk6pc5wiCPat/giphy.gif?cid=ecf05e475e6w806g3am9my88tvm1tzmp2ttipl4anvs17ov3&rid=giphy.gif&ct=g',
+    project:true,
+    github:'https://github.com/Gozi1/Interview-Scheduler',
+    site: 'https://ngozi-interview-scheduler.netlify.app/'
+  },
   "Story Creator":{
     title:'Story Creator',
     description:'An app that lets you write a story and lets other people contribute to that story. Users that created a story can select which contribution is worthy to the next part of the story, and reject all others.',
@@ -29,10 +38,10 @@ const data ={
     title:"Tiny App",
     description:`A URL shortening service similar to Bitly or Goo.gl. It permits  a users to create, read, update, and delete URLs 
     `,
-    techStack: ['EJS','Express','Vanilla JS'],
+    techStack:['EJS','Express','Vanilla JS'],
     img:'https://media0.giphy.com/media/8PpFJcG4y8HqsxQumz/giphy.gif?cid=ecf05e472bk16h21k73k68q8lnoadz0of17ukie4t7f5puf9&rid=giphy.gif&ct=g',
     project:true,
-    github: 'https://github.com/Gozi1/tinyapp'
+    github:'https://github.com/Gozi1/tinyapp'
   }
 
 }
