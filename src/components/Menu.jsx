@@ -1,7 +1,7 @@
 
 import { useState,useEffect } from "react"
 import './Main.scss'
-
+import {MdKeyboardArrowDown} from 'react-icons/md'
 
 const Menu = (props) => {
   const [drop,setDrop] =  useState(false)
@@ -30,15 +30,51 @@ const Menu = (props) => {
           }}>
             About
             </li>
+        
+
+        
         <li 
+          onClick={()=>{
+          setCurrentDisplay("Contact")
+          if(currentDisplay !== 'Contact'){
+            changeColor()
+            }
+            }}>
+            Contact
+            </li>
+        <li 
+          onClick={()=>{
+          setCurrentDisplay("Hobbies")
+          if(currentDisplay !== 'Hobbies'){
+            changeColor()
+            }
+          }} >
+          Hobbies
+          </li>    
+        <li>
+          <a href="Resume.pdf"
+              download>
+              Resume
+              </a>
+              </li>
+              <li 
           onClick={()=>{
           setDrop(!drop)
           }}
           >
-            Projects
+            Projects <MdKeyboardArrowDown className = {`project-arrow ${drop? 'downarrow': ''}`} />
           </li>
-          {drop && 
-          <div className='Project-Menu '>
+          
+          <div className={drop?'project-menu ':'hide'}>
+          <li onClick={()=>{
+              setCurrentDisplay("Interview Scheduler")
+              if(currentDisplay !== 'Interview Scheduler'){
+                changeColor()
+                }
+            }} 
+            >
+            Interview Scheduler
+            </li>
             <li onClick={()=>{
               setCurrentDisplay("Story Creator");
               if(currentDisplay !== 'Story Creator'){
@@ -58,41 +94,8 @@ const Menu = (props) => {
             >
             Tiny App
             </li>
-            <li onClick={()=>{
-              setCurrentDisplay("Interview Scheduler")
-              if(currentDisplay !== 'Interview Scheduler'){
-                changeColor()
-                }
-            }} 
-            >
-            Interview Scheduler
-            </li>
-          </div>}
-
-        <li 
-          onClick={()=>{
-          setCurrentDisplay("Hobbies")
-          if(currentDisplay !== 'Hobbies'){
-            changeColor()
-            }
-          }} >
-          Hobbies
-          </li>
-        <li 
-          onClick={()=>{
-          setCurrentDisplay("Contact")
-          if(currentDisplay !== 'Contact'){
-            changeColor()
-            }
-            }}>
-            Contact
-            </li>
-        <li>
-          <a href="https://flowcv.com/resume/jbvfgcke9s"
-              target="_blank">
-              Resume
-              </a>
-              </li>
+            
+          </div>         
       </ul>
     </div>
   )

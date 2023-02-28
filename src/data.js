@@ -1,7 +1,7 @@
 const data ={
   "About":{
     title:'About',
-    description: `Hello! My name is Ngozi Nwabiani. I am a Full-Stack Developer .\n\nAround 2016, I developed an interest in web development ,when I decided to build my first web page. Fast foward to now, I'm striving towards my dream of building innovative apps and working with incredible coders, designers, artists and like-minded individuals to make a seamless experience for users.   
+    description: `Hello! My name is Ngozi Nwabiani. I'm a Software Developer.\n\nIn 2016, my curiosity for development was sparked. I decided to build my very first app. And let me tell you, I haven't looked back since! I am driven and determined to make my dream a reality - to create apps that push boundaries and challenge the norm. I am passionate about collaborating with amazing coders, designers, artists, and fellow enthusiasts to deliver a seamless and unparalleled experience for users.   
     `,
     img:'https://media0.giphy.com/media/3oz8xALBEmIav48OYg/giphy.gif?cid=ecf05e475m73mz3jolt4qz4plp2sdqf77axl3nad0v95zmxb&rid=giphy.gif&ct=g'
   },

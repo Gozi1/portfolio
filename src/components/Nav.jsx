@@ -1,6 +1,5 @@
 import React from 'react'
-import { ImGithub,ImInstagram,ImLinkedin2,ImMenu,ImCross} from "react-icons/im";
-import { useState } from 'react';
+import { ImGithub, ImLinkedin2} from "react-icons/im";
 import './Nav.scss'
 
 const Nav = (props) => {
@@ -61,19 +60,14 @@ const Nav = (props) => {
 </svg>
   
     <ul className = 'socials ' id="change">
-          <li className='selected'>
-            <a href="https://www.instagram.com/haimgod_/" 
-            target="_blank">
-              <ImInstagram id="change"/>
-              </a></li>
           <li>
-            <a href="https://www.linkedin.com/in/ngozi-nwabiani-13652a217/"
-            target="_blank">
+            <a href="https://www.linkedin.com/in/nwabiani-ngozi"
+            target="_blank" rel="noreferrer">
               <ImLinkedin2 id="change"/>
               </a></li>
           <li>
             <a href="https://github.com/Gozi1"
-            target="_blank">
+            target="_blank" rel="noreferrer">
               <ImGithub id="change"/>
               </a></li>
         </ul>
