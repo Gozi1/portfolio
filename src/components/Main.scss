@@ -1,389 +1,381 @@
-$blue-color: #3185FC;
+$blue-color: #3185fc;
 $white: #eff6ee;
 $cadet: #252555;
-$HELO:#626b49;
-$purple: #7209B7;
-$regularFont:'Lusitana', serif;
+$HELO: #626b49;
+$purple: #7209b7;
+$regularFont: 'Lusitana', serif;
 
-*{
-  background-color: transparent;
-  font-family: $regularFont;
-  color: $white;
+* {
+	background-color: transparent;
+	font-family: $regularFont;
+	color: $white;
 }
-a, a:hover, a:focus, a:active {
-  text-decoration: none;
-  color: $white;
-}
-
-
-main{
-  position: absolute;
-  width: 90%;
-  height: 85%;
-  padding: 7px;
-  margin: 25px;
- 
+a,
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	color: $white;
 }
 
-
-.content-div{
-  display:flex;
-  justify-content: space-between;
-  margin-left:3rem ;
-  align-items: center;
-  position: relative;
-  height: 50%;
-  top:10%
+main {
+	position: absolute;
+	width: 90%;
+	height: 85%;
+	padding: 7px;
+	margin: 25px;
 }
 
-
-.loading{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  display:flex;
-  background-color: $cadet;
-  justify-content: center;
-  align-items: center;
-  animation: disappear 0.3s ease-in forwards;
-  animation-delay: 3.2s;
+.content-div {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 3rem;
+	align-items: center;
+	position: relative;
+	height: 50%;
+	top: 10%;
 }
 
-.loading svg circle{
-  stroke-dasharray: 350;
-  stroke-dashoffset: 350;
-  animation: circleAppear 2s ease-in forwards;
+.loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	display: flex;
+	background-color: $cadet;
+	justify-content: center;
+	align-items: center;
+	animation: disappear 0.3s ease-in forwards;
+	animation-delay: 3.2s;
 }
-.loading path{
-  opacity: 0;
-  transform-origin: center center;
-  transform:scale(0.6,0.6);
-  animation: appearN 0.4s ease-in forwards;
-  animation-delay: 2s;
+
+.loading svg circle {
+	stroke-dasharray: 350;
+	stroke-dashoffset: 350;
+	animation: circleAppear 2s ease-in forwards;
+}
+.loading path {
+	opacity: 0;
+	transform-origin: center center;
+	transform: scale(0.6, 0.6);
+	animation: appearN 0.4s ease-in forwards;
+	animation-delay: 2s;
 }
 @keyframes circleAppear {
-  to {
-    stroke-dashoffset: 0;
-  }
+	to {
+		stroke-dashoffset: 0;
+	}
 }
 @keyframes appearN {
-  to {
-    opacity: 1;
-    transform:scale(1,1);
-  }
+	to {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
 }
 @keyframes disappear {
-  to {
-    opacity: 0;
-    z-index: -1;
-    content:'';
-  }
-  
+	to {
+		opacity: 0;
+		z-index: -1;
+		content: '';
+	}
 }
-.Menu{
-  font-size: 3rem;
-  cursor: pointer;
-  text-align: left;
+.Menu {
+	font-size: 3rem;
+	cursor: pointer;
+	text-align: left;
 }
-.Menu>ul > *:not(:last-child){
-  display: block;
-    margin-bottom: 1rem;
+.Menu > ul > *:not(:last-child) {
+	display: block;
+	margin-bottom: 1rem;
 }
-.Menu li{
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  
-  }
+.Menu li {
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	text-decoration: none;
+}
 .Menu li::after {
-  content: '';
-  position: absolute;
-  width: 45%;
-  transform: scaleX(0);
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  background-color: #A5A7B6;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+	content: '';
+	position: absolute;
+	width: 45%;
+	transform: scaleX(0);
+	height: 4px;
+	bottom: 0;
+	left: 0;
+	background-color: #a5a7b6;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
 }
 
 .Menu li:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
- 
-} 
-
-.hide{
-  opacity: 0;
-  margin-left: 1rem;
-  font-size: 2rem;
-}
-.project-menu{
-  font-size: 2rem;
-  margin-left: 1rem;
-  
-  
-  li{  
-    visibility: hidden;
-    animation: slideIn 350ms ease-out both;
-    @for $i from 1 through 50 {
-      &:nth-child(#{$i}) {
-        margin-bottom: 0.5rem;
-        @if $i%2 == 0 {transform:translateX(-3rem);}
-        @else { transform:translateX(3rem);}
-        animation-delay: 250ms * $i;
-      }
-    }
-  }
- 
-}
-@keyframes slideIn{
-  to{
-  visibility: visible;
-  transform: scale(1) translateX(0);
-  }
-}
-.project-arrow{
-  font-size: 2rem;
-  transition: all 0.3s ease;
-}
-.downarrow{
-  transform: rotate(180deg);
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
+.hide {
+	opacity: 0;
+	margin-left: 1rem;
+	font-size: 2rem;
+}
+.project-menu {
+	font-size: 2rem;
+	margin-left: 1rem;
 
-.project-title{
-  display: flex;
-  font-family:  $regularFont;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+	li {
+		visibility: hidden;
+		animation: slideIn 350ms ease-out both;
+		@for $i from 1 through 50 {
+			&:nth-child(#{$i}) {
+				margin-bottom: 0.5rem;
+				@if $i%2 == 0 {
+					transform: translateX(-3rem);
+				} @else {
+					transform: translateX(3rem);
+				}
+				animation-delay: 250ms * $i;
+			}
+		}
+	}
 }
-.display-component{
-  text-align: left;
-  opacity: 0;
-  position: relative;
-  h1{
-    font-size: 4rem;
-    font-family:  $regularFont;
-    background: transparent;
+@keyframes slideIn {
+	to {
+		visibility: visible;
+		transform: scale(1) translateX(0);
+	}
+}
+.project-arrow {
+	font-size: 2rem;
+	transition: all 0.3s ease;
+}
+.downarrow {
+	transform: rotate(180deg);
 }
 
-p{
-  font-size: 1.5rem;
-  width:50vw;
-  white-space: pre-wrap;
-  background: transparent;
+.project-title {
+	display: flex;
+	font-family: $regularFont;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
 }
+.display-component {
+	text-align: left;
+	opacity: 0;
+	position: relative;
+	h1 {
+		font-size: 4rem;
+		font-family: $regularFont;
+		background: transparent;
+	}
 
+	p {
+		font-size: 1.5rem;
+		width: 50vw;
+		white-space: pre-wrap;
+		background: transparent;
+	}
 }
-.img-box{
-  width: 20rem;
-  height:24rem;
-  z-index: -1;
-  filter: grayscale(50%) ;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  filter: grayscale(110%);
-  opacity: 0.35;
-  top:10%;
-  right:5%;
-  border-radius: 13% 87% 15% 85% / 71% 20% 80% 29% ;
+.img-box {
+	width: 20rem;
+	height: 24rem;
+	z-index: -1;
+	filter: grayscale(50%);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	filter: grayscale(110%);
+	opacity: 0.35;
+	top: 10%;
+	right: 5%;
+	border-radius: 13% 87% 15% 85% / 71% 20% 80% 29%;
 }
-.contact{
-  opacity: 0;
-  position: relative;
-  h1{
-    font-size: 4rem;
-    font-family:  $regularFont;
-    background: transparent;
+.contact {
+	opacity: 0;
+	position: relative;
+	h1 {
+		font-size: 4rem;
+		font-family: $regularFont;
+		background: transparent;
+	}
+	p {
+		font-size: 1.2rem;
+		width: 50vw;
+		white-space: pre-wrap;
+	}
 }
-p{
-  font-size: 1.2rem;
-  width: 50vw;
-  white-space: pre-wrap;
-}
-}
-.contact-form{
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center ;
-  justify-content: space-around;
-  
-  input{
-    width: 50vw;
-    margin-bottom:1.5rem;
-    font-size: 1.2rem;
-    border: none;
-    border-bottom:1px $white solid;
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 
-  }
-  input:focus {
-    outline: none;
-    animation: colourChanger 4s ease-in infinite;
-  }
-  textarea{
-    width: 50vw;
-    font-size: 1.2rem;
-    margin-bottom:2rem;
-    border: none;
-    border-bottom:1px $white solid;
-  }
-  textarea:focus {
-    outline: none ;
-    animation: colourChanger 5s linear infinite;
-  }
-  button{
-    background-color:$white;
-   
-    width: 15rem;
-    height: 2rem;
-    border: none;
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
-    border-radius: 3px;
-    cursor: pointer;
-    svg{
-      fill:#000;
-    }
-  }
-  button:hover{
-    transform: translateY(-3px) translateX(3px);
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
-    background-color:#000;
-    svg{
-      fill:$white;
-    }
-  }
+	input {
+		width: 50vw;
+		margin-bottom: 1.5rem;
+		font-size: 1.2rem;
+		border: none;
+		border-bottom: 1px $white solid;
+	}
+	input:focus {
+		outline: none;
+		animation: colourChanger 4s ease-in infinite;
+	}
+	textarea {
+		width: 50vw;
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		border: none;
+		resize: none;
+		border-bottom: 1px $white solid;
+	}
+	textarea:focus {
+		outline: none;
+		animation: colourChanger 5s linear infinite;
+	}
+	button {
+		background-color: $white;
+
+		width: 15rem;
+		height: 2rem;
+		border: none;
+		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+		border-radius: 3px;
+		cursor: pointer;
+		svg {
+			fill: #000;
+		}
+	}
+	button:hover {
+		transform: translateY(-3px) translateX(3px);
+		box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+		background-color: #000;
+		svg {
+			fill: $white;
+		}
+	}
 }
 @keyframes colourChanger {
-  0%{
-    border-bottom:3px #3640FC solid;
-   
-  }
-  20%{
-    border-bottom:3px #334195 solid;
-  }
-  40%{
-    border-bottom:3px #647AA3 solid;
-  }
-  60%{
-    border-bottom:3px #95B2B0 solid;
-  }
-  80%{
-    border-bottom:3px #C6EBBE solid;
-  }
-  100%{
-    border-bottom:3px #3640FC solid;
-  }
-
+	0% {
+		border-bottom: 3px #3640fc solid;
+	}
+	20% {
+		border-bottom: 3px #334195 solid;
+	}
+	40% {
+		border-bottom: 3px #647aa3 solid;
+	}
+	60% {
+		border-bottom: 3px #95b2b0 solid;
+	}
+	80% {
+		border-bottom: 3px #c6ebbe solid;
+	}
+	100% {
+		border-bottom: 3px #3640fc solid;
+	}
 }
 
-.project-List{
-  display: flex;
-  padding: 0;
-  li{
-    margin-right: 2rem;
-    padding-bottom:3px;
-    border: 2px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #fff, #000);
-    border-radius: 10px;
-    border-right: 0;
-    border-left: 0;
-    border-top:0;
-  }
-  li:hover{
-    border-image-source: linear-gradient(to right, #fff, #000);
-  }
+.project-List {
+	display: flex;
+	padding: 0;
+	li {
+		margin-right: 2rem;
+		padding-bottom: 3px;
+		border: 2px solid;
+		border-image-slice: 1;
+		border-image-source: linear-gradient(to left, #fff, #000);
+		border-radius: 10px;
+		border-right: 0;
+		border-left: 0;
+		border-top: 0;
+	}
+	li:hover {
+		border-image-source: linear-gradient(to right, #fff, #000);
+	}
 }
-.gitRef{
-  padding-bottom:3px;
-  margin-right: 2rem;
-  border: 2px solid white;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #fff, #000);
-  border-right: 0;
-  border-left: 0;
-  border-top:0;
-  display: flex;
-  align-items: center;
+.gitRef {
+	padding-bottom: 3px;
+	margin-right: 2rem;
+	border: 2px solid white;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to left, #fff, #000);
+	border-right: 0;
+	border-left: 0;
+	border-top: 0;
+	display: flex;
+	align-items: center;
 }
-.gitRef:hover{
-  border-image-source: none;
-  transform: scale(1.3);
+.gitRef:hover {
+	border-image-source: none;
+	transform: scale(1.2);
 }
-.siteRef{
-  padding-bottom:3px;
-  border: 2px solid white;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #fff, #000);
-  border-right: 0;
-  border-left: 0;
-  border-top:0;
-  display: flex;
-  align-items: center;
+.siteRef {
+	padding-bottom: 3px;
+	border: 2px solid white;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to left, #fff, #000);
+	border-right: 0;
+	border-left: 0;
+	border-top: 0;
+	display: flex;
+	align-items: center;
 }
-.siteRef:hover{
-  border-image-source: none;
-  transform: scale(1.3);
+.siteRef:hover {
+	border-image-source: none;
+	transform: scale(1.2);
 }
-footer{
-  position: absolute;
-  font-size: 1.1rem;
-  bottom:3%;
-  right:50%
+footer {
+	position: absolute;
+	font-size: 1.1rem;
+	bottom: 3%;
+	right: 50%;
 }
 
 @media (max-width: 900px) {
- *{
-  overflow-x: hidden;
-  overflow-y: visible;
- }
-  main{
-    width:100vw;
-    height:max-content ;
-    margin: 0;
-    padding: 0;
-    position: static;
-  }
-  
-  .content-div{
-    flex-direction: column;
-    margin: 0;
-  }
-  footer{
-    position: static;
-    margin-top: 3rem;
-    margin-left: 70%;
-    margin-bottom: 10px;
-  }
-  .display-component{
-    padding-left: 2rem;
-    overflow-y: visible;
-    p{
-      width: 90%;
-      overflow-y: visible;
-    }
-  }
-  .project-List{
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .contact{
-    padding-left: 2rem;
-    p{
-      width: 90%;
-    }
-    textarea{
-      width: 70vw;
-    }
-    input{
-      width: 70vw;
-    }
-  }
+	* {
+		overflow-x: hidden;
+		overflow-y: visible;
+	}
+	main {
+		width: 100vw;
+		height: max-content;
+		margin: 0;
+		padding: 0;
+		position: static;
+	}
+
+	.content-div {
+		flex-direction: column;
+		margin: 0;
+	}
+	footer {
+		position: static;
+		margin-top: 3rem;
+		margin-left: 70%;
+		margin-bottom: 10px;
+	}
+	.display-component {
+		padding-left: 2rem;
+		overflow-y: visible;
+		p {
+			width: 90%;
+			overflow-y: visible;
+		}
+	}
+	.project-List {
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+	.contact {
+		padding-left: 2rem;
+		p {
+			width: 90%;
+		}
+		textarea {
+			width: 70vw;
+		}
+		input {
+			width: 70vw;
+		}
+	}
 }

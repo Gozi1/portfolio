@@ -20,7 +20,7 @@ const data ={
   "Interview Scheduler":{
     title:'Interview Scheduler',
     description:"A react app that creates a simulation of a project that allows a student to make appointments with a mentor.It is made in conjuction with a scheduler api.",
-    techStack:['React','Sass','PSQL','Jest','Cypress'],
+    techStack:['React','Scss','PSQL','Jest','Cypress'],
     img: 'https://media2.giphy.com/media/AR1auiuk6pc5wiCPat/giphy.gif?cid=ecf05e475e6w806g3am9my88tvm1tzmp2ttipl4anvs17ov3&rid=giphy.gif&ct=g',
     project:true,
     github:'https://github.com/Gozi1/Interview-Scheduler',
