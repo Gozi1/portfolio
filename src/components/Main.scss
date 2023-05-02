@@ -4,6 +4,7 @@ $cadet: #252555;
 $HELO: #626b49;
 $purple: #7209b7;
 $regularFont: 'Lusitana', serif;
+$grey: #c3c3c4;
 
 * {
 	background-color: transparent;
@@ -278,52 +279,45 @@ main {
 .project-List {
 	display: flex;
 	padding: 0;
+	gap: 2rem;
+	justify-content:flex-start;
+	align-items: center;
+	padding-bottom: 3px;
 	li {
-		margin-right: 2rem;
-		padding-bottom: 3px;
-		border: 2px solid;
-		border-image-slice: 1;
-		border-image-source: linear-gradient(to left, #fff, #000);
-		border-radius: 10px;
-		border-right: 0;
-		border-left: 0;
-		border-top: 0;
+		border: none;
+		font-size: 1.5rem;
+		svg{
+			font-size: 2rem;
+		}
+		
+		cursor: help;
+	}
+	li::before {
+		content: attr(data-text);
+		text-align: center;
+		position: absolute;
+		font-size: 1rem;
+		transform: translateY(3rem);
+		display: none;
+		color: $grey;
 	}
 	li:hover {
-		border-image-source: linear-gradient(to right, #fff, #000);
+		svg {
+			fill: $grey;
+		}
+	}
+	li:hover::before {
+		display: block;
 	}
 }
-.gitRef {
-	padding-bottom: 3px;
-	margin-right: 2rem;
-	border: 2px solid white;
-	border-image-slice: 1;
-	border-image-source: linear-gradient(to left, #fff, #000);
-	border-right: 0;
-	border-left: 0;
-	border-top: 0;
-	display: flex;
-	align-items: center;
+
+.site {
+	cursor:pointer;
 }
-.gitRef:hover {
-	border-image-source: none;
-	transform: scale(1.2);
+.site:hover{
+		transform: scale(1.1);
 }
-.siteRef {
-	padding-bottom: 3px;
-	border: 2px solid white;
-	border-image-slice: 1;
-	border-image-source: linear-gradient(to left, #fff, #000);
-	border-right: 0;
-	border-left: 0;
-	border-top: 0;
-	display: flex;
-	align-items: center;
-}
-.siteRef:hover {
-	border-image-source: none;
-	transform: scale(1.2);
-}
+
 footer {
 	position: absolute;
 	font-size: 1.1rem;

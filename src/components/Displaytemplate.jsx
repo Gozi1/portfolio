@@ -1,6 +1,30 @@
 import { useEffect } from 'react';
-
+import {
+	SiReact,
+	SiSass,
+	SiPostgresql,
+	SiJest,
+	SiCypress,
+	SiJquery,
+	SiExpress,
+	SiNextdotjs,
+	SiPrisma,
+	SiGithub
+} from 'react-icons/si';
 const Displaytemplate = (props) => {
+	const iconObj = {
+		react: <SiReact />,
+		sass: <SiSass />,
+		scss: <SiSass />,
+		postgresql: <SiPostgresql />,
+		jest: <SiJest />,
+		cypress: <SiCypress />,
+		jquery: <SiJquery />,
+		express: <SiExpress />,
+		nextjs: <SiNextdotjs />,
+		prisma: <SiPrisma />,
+		github: <SiGithub />,
+	}
 	const { displayObj } = props;
 	const { title, description, techStack, img, project, github, site } =
 		displayObj;
@@ -24,18 +48,18 @@ const Displaytemplate = (props) => {
 			{project && (
 				<ul className='project-List'>
 					{techStack.map((value, index) => {
-						return <li key={index}>{value}</li>;
+						return <li key={index} data-text ={value} >{iconObj[value.toLowerCase()]}</li>;
 					})}
 
 					{github && (
-						<a className='gitRef' href={github}>
-							View Github
-						</a>
+						<li data-text ='View GitHub' className='site'><a  href={github} >
+						{iconObj['github']}
+					</a></li>
 					)}
 					{site && (
-						<a className='siteRef' href={site}>
-							View Site
-						</a>
+						<li className='site'><a  href={site}>
+						View Site
+					</a></li>
 					)}
 				</ul>
 			)}
