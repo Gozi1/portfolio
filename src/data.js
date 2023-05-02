@@ -20,7 +20,7 @@ const data ={
   "Interview Scheduler":{
     title:'Interview Scheduler',
     description:"A react app that creates a simulation of a project that allows a student to make appointments with a mentor.It is made in conjuction with a scheduler api.",
-    techStack:['React','Scss','PSQL','Jest','Cypress'],
+    techStack:['React','Scss','PostgreSQL','Jest','Cypress'],
     img: 'https://media2.giphy.com/media/AR1auiuk6pc5wiCPat/giphy.gif?cid=ecf05e475e6w806g3am9my88tvm1tzmp2ttipl4anvs17ov3&rid=giphy.gif&ct=g',
     project:true,
     github:'https://github.com/Gozi1/Interview-Scheduler',
@@ -34,14 +34,22 @@ const data ={
     project:true,
     github:'https://github.com/aflotten/Story-Creator'
   },
-  "Tiny App":{
-    title:"Tiny App",
-    description:`A URL shortening service similar to Bitly or Goo.gl. It permits  a users to create, read, update, and delete URLs 
-    `,
-    techStack:['EJS','Express','Vanilla JS'],
-    img:'https://media0.giphy.com/media/8PpFJcG4y8HqsxQumz/giphy.gif?cid=ecf05e472bk16h21k73k68q8lnoadz0of17ukie4t7f5puf9&rid=giphy.gif&ct=g',
+  // "Tiny App":{
+  //   title:"Tiny App",
+  //   description:`A URL shortening service similar to Bitly or Goo.gl. It permits  a users to create, read, update, and delete URLs 
+  //   `,
+  //   techStack:['EJS','Express','Vanilla JS'],
+  //   img:'https://media0.giphy.com/media/8PpFJcG4y8HqsxQumz/giphy.gif?cid=ecf05e472bk16h21k73k68q8lnoadz0of17ukie4t7f5puf9&rid=giphy.gif&ct=g',
+  //   project:true,
+  //   github:'https://github.com/Gozi1/tinyapp'
+  // },
+  "LH-Fit":{
+    title:"LH-FIT",
+    description:`A workout generator app that creates dynamic plans personalized to user preferences. Users can select their experience level, training type, and muscle groups. Saved routines can be edited for optimized results, catering to all fitness levels.`,
+    techStack:['NextJS','Prisma','Scss'],
+    img:'https://media2.giphy.com/media/3oFzms14TXDvrIazxC/giphy.gif?cid=ecf05e478asb2hhc3r8wwtgo3laqhcvbqj365mh4zemob5q5&ep=v1_gifs_search&rid=giphy.gif&ct=g',
     project:true,
-    github:'https://github.com/Gozi1/tinyapp'
+    github:'https://github.com/Gozi1/LH-FIT'
   }
 
 }
