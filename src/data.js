@@ -7,7 +7,7 @@ const data ={
   },
   "Hobbies":{
     title:'Hobbies',
-    description:"I'm really passionate about reading mangas and watching all kinds of anime genres, specifically isekai-related or psychological ones.\n\nI also enjoy playing  mostly first-person shooter games like Valorant, Apex-Legends, Overwatch, TFT and recently Darker and darker. These let me immerse myself in different worlds and experiences.",
+    description:"I love seeing my physical limits at the gym and I'm passionate about reading mangas and watching all kinds of anime genres, specifically isekai-related or psychological ones.\n\nI also enjoy playing  mostly first-person shooter games like Valorant, Apex-Legends, Overwatch, TFT and recently Darker and darker. These let me immerse myself in different worlds and experiences.",
     img:'https://media0.giphy.com/media/jIqh3ym2s7GU/giphy.gif?cid=ecf05e47pb5eildsh6rdtix8gxrr9tkksp9zsu49g91ysytk&rid=giphy.gif&ct=g'
   },
   "Mapping RC Car":{

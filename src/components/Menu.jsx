@@ -54,7 +54,7 @@ const Menu = (props) => {
 					Hobbies
 				</li>
 				<li>
-					<a href='Nwabiani_Ngozi_Resume.pdf' download>
+					<a href='Nwabiani-Ngozi-Resume.pdf' download>
 						Resume
 					</a>
 				</li>
