@@ -43,16 +43,6 @@ const Menu = (props) => {
 				>
 					Contact
 				</li>
-				<li
-					onClick={() => {
-						setCurrentDisplay('Hobbies');
-						if (currentDisplay !== 'Hobbies') {
-							changeColor();
-						}
-					}}
-				>
-					Hobbies
-				</li>
 				<li>
 					<a href='Nwabiani-Ngozi-Resume.pdf' download>
 						Resume
