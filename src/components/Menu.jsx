@@ -44,7 +44,7 @@ const Menu = (props) => {
 					Contact
 				</li>
 				<li>
-					<a href='Nwabiani-Ngozi-Resume.pdf' download>
+					<a href='Samuel_Nwabiani_Resume.pdf' download>
 						Resume
 					</a>
 				</li>
