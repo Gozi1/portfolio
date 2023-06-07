@@ -58,7 +58,7 @@ function App() {
 					/>
 				</div>
 			</main>
-			<footer>© Ngozi Nwabiani 2023</footer>
+			<footer>© Samuel Nwabiani 2023</footer>
 		</div>
 	);
 }
