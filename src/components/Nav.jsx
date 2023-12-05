@@ -118,7 +118,7 @@ const Nav = (props) => {
 			<ul className='socials '>
 				<li>
 					<a
-						href='https://www.linkedin.com/in/nwabiani-ngozi'
+						href='https://www.linkedin.com/in/samuel-nwabiani/'
 						target='_blank'
 						rel='noreferrer'
 					>
