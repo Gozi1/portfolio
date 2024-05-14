@@ -1,7 +1,9 @@
 const data ={
   "About":{
     title:'About',
-    description: `Hello! My name is Samuel Nwabiani. I'm a Software Developer.\n\nIn 2016, my curiosity for development was sparked. I decided to build my very first app. And let me tell you, I haven't looked back since! I am determined to make my dreams a reality and I'm passionate about collaborating with amazing coders, designers, artists, and fellow enthusiasts to deliver a seamless and unparalleled experience for users.   
+    description: `I'm Sam, and I'm all about bringing energy, expertise, and empathy to everything I do. With a deep-rooted passion for technology and a love for connecting with people, I thrive in collaborative environments where innovation and teamwork are valued.
+
+My approach to work is marked by a blend of technical proficiency and interpersonal skills. I believe in not just solving problems, but in finding creative and sustainable solutions that drive meaningful outcomes. Whether it's diving into complex technical challenges, leading diverse teams, or fostering strong client relationships, I'm committed to delivering excellence while maintaining a positive and supportive atmosphere. If you're looking for a dedicated team player who not only gets the job done but also inspires others along the way, let's connect and explore how we can achieve success together.   
     `,
     img:'https://media0.giphy.com/media/3oz8xALBEmIav48OYg/giphy.gif?cid=ecf05e475m73mz3jolt4qz4plp2sdqf77axl3nad0v95zmxb&rid=giphy.gif&ct=g'
   },
@@ -10,13 +12,13 @@ const data ={
   //   description:"I love seeing my  limits and I'm passionate about reading mangas and watching all kinds of anime genres, specifically isekai-related or psychological ones.\n\nI also enjoy playing mostly first-person shooter games like Valorant, Apex-Legends, Overwatch, TFT and recently Darker and darker. These let me immerse myself in different worlds and experiences.",
   //   img:'https://media0.giphy.com/media/jIqh3ym2s7GU/giphy.gif?cid=ecf05e47pb5eildsh6rdtix8gxrr9tkksp9zsu49g91ysytk&rid=giphy.gif&ct=g'
   // },
-  "Mapping RC Car":{
-    title:'Mapping RC car',
-    description:"An Arduino RC car with a HC-SR04 and NRF24L01 can map surroundings, navigate autonomously and be controlled remotely. It's a versatile and intelligent device for navigation and mapping.",
-    techStack:[''],
-    img: 'https://media3.giphy.com/media/W1lu77FtX90DWp5Ay1/giphy.gif?cid=ecf05e47gsn4xyguxgowrlz3t02dw4c6cnkdx5spg9m2wf6r&rid=giphy.gif&ct=g',
-    project:true
-  },
+  // "Mapping RC Car":{
+  //   title:'Mapping RC car',
+  //   description:"An Arduino RC car with a HC-SR04 and NRF24L01 can map surroundings, navigate autonomously and be controlled remotely. It's a versatile and intelligent device for navigation and mapping.",
+  //   techStack:[''],
+  //   img: 'https://media3.giphy.com/media/W1lu77FtX90DWp5Ay1/giphy.gif?cid=ecf05e47gsn4xyguxgowrlz3t02dw4c6cnkdx5spg9m2wf6r&rid=giphy.gif&ct=g',
+  //   project:true
+  // },
   "Interview Scheduler":{
     title:'Interview Scheduler',
     description:"A react app that creates a simulation of a project that allows a student to make appointments with a mentor.It is made in conjuction with a scheduler api.",
