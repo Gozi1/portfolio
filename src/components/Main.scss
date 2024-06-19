@@ -126,7 +126,7 @@ main {
 		animation: slideIn 350ms ease-out both;
 		@for $i from 1 through 50 {
 			&:nth-child(#{$i}) {
-				margin-bottom: 0.5rem;
+				margin-bottom: 0.3rem;
 				@if $i%2 == 0 {
 					transform: translateX(-3rem);
 				} @else {
@@ -161,15 +161,15 @@ main {
 .display-component {
 	text-align: left;
 	opacity: 0;
-	position: relative;
+	// position: relative;
 	h1 {
-		font-size: 5rem;
+		font-size: 3rem;
 		font-family: $regularFont;
 		background: transparent;
 	}
 
 	p {
-		font-size: 2rem;
+		font-size: 1.7rem;
 		width: 50vw;
 		white-space: pre-wrap;
 		background: transparent;
