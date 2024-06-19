@@ -20,9 +20,6 @@ a:active {
 }
 
 main {
-	position: absolute;
-	width: 90%;
-	height: 85%;
 	padding: 7px;
 	margin: 25px;
 }
@@ -33,7 +30,7 @@ main {
 	margin-left: 3rem;
 	align-items: center;
 	position: relative;
-	height: 50%;
+	// height: 50%;
 	top: 10%;
 }
 
@@ -161,7 +158,7 @@ main {
 .display-component {
 	text-align: left;
 	opacity: 0;
-	// position: relative;
+	position: relative;
 	h1 {
 		font-size: 3rem;
 		font-family: $regularFont;
@@ -324,10 +321,13 @@ main {
 }
 
 footer {
-	position: absolute;
+	position: relative;
 	font-size: 1.1rem;
+	width: 100%;
+	margin-left: 50%;
+	margin-right: 50%;
 	bottom: 3%;
-	right: 50%;
+	// right: 50%;
 }
 
 @media (max-width: 900px) {

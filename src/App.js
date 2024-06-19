@@ -27,21 +27,21 @@ function App() {
 			//Aubergine purple
 			'linear-gradient(to right, #aa076b , #61045f)',
 		];
-		const randomNum = () => {
-			let randomNumber = Math.floor(Math.random() * 5);
-			let prevNumber = colors.indexOf(color);
-			while (randomNumber === prevNumber) {
-				randomNumber = Math.floor(Math.random() * 6);
-			}
-			return randomNumber;
-		};
+
+		let previousColor = null;
+		function randomNum() {
+			let num;
+			do {
+				num = Math.floor(Math.random() * colors.length);
+			} while (previousColor !== null && previousColor === num);
+			previousColor = num;
+			return num;
+		}
 		setColor(colors[randomNum()]);
 	}
 
 	useEffect(() => {
-		console.log(color);
 		document.querySelector('*').style.background=color;
-		// document.querySelector('*').style.backgroundImage = color;
 	}, [color]);
 	return (
 		<div className='App'  >
