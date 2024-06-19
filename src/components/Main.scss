@@ -1,13 +1,13 @@
 $blue-color: #3185fc;
 $white: #eff6ee;
-$cadet: #252555;
+$cadet: linear-gradient(to right, #2b5876, #4e4376);
 $HELO: #626b49;
 $purple: #7209b7;
 $regularFont: 'Lusitana', serif;
 $grey: #c3c3c4;
 
 * {
-	background-color: transparent;
+	// background-color: transparent;
 	font-family: $regularFont;
 	color: $white;
 }
@@ -43,7 +43,7 @@ main {
 	height: 100%;
 	z-index: 3;
 	display: flex;
-	background-color: $cadet;
+	background-image: $cadet;
 	justify-content: center;
 	align-items: center;
 	animation: disappear 0.3s ease-in forwards;
@@ -163,13 +163,13 @@ main {
 	opacity: 0;
 	position: relative;
 	h1 {
-		font-size: 4rem;
+		font-size: 5rem;
 		font-family: $regularFont;
 		background: transparent;
 	}
 
 	p {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		width: 50vw;
 		white-space: pre-wrap;
 		background: transparent;
@@ -209,17 +209,20 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
+	color: black;
 
 	input {
 		width: 50vw;
 		margin-bottom: 1.5rem;
 		font-size: 1.2rem;
 		border: none;
+		padding:10px;
+		border-radius: 10px;
 		border-bottom: 1px $white solid;
+		color: black;
 	}
 	input:focus {
-		outline: none;
-		animation: colourChanger 4s ease-in infinite;
+		outline: 2px solid grey;
 	}
 	textarea {
 		width: 50vw;
@@ -228,19 +231,21 @@ main {
 		border: none;
 		resize: none;
 		border-bottom: 1px $white solid;
+		border-radius: 10px;
+		padding:10px;
+		color: black;
 	}
 	textarea:focus {
-		outline: none;
-		animation: colourChanger 5s linear infinite;
+		outline: 2px solid grey;
 	}
 	button {
 		background-color: $white;
 
-		width: 15rem;
-		height: 2rem;
+		width: 100%;
+		height: 3rem;
 		border: none;
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-		border-radius: 3px;
+		border-radius: 10px;
 		cursor: pointer;
 		svg {
 			fill: #000;
@@ -255,26 +260,26 @@ main {
 		}
 	}
 }
-@keyframes colourChanger {
-	0% {
-		border-bottom: 3px #3640fc solid;
-	}
-	20% {
-		border-bottom: 3px #334195 solid;
-	}
-	40% {
-		border-bottom: 3px #647aa3 solid;
-	}
-	60% {
-		border-bottom: 3px #95b2b0 solid;
-	}
-	80% {
-		border-bottom: 3px #c6ebbe solid;
-	}
-	100% {
-		border-bottom: 3px #3640fc solid;
-	}
-}
+// @keyframes colourChanger {
+// 	0% {
+// 		border-bottom: 3px #3640fc solid;
+// 	}
+// 	20% {
+// 		border-bottom: 3px #334195 solid;
+// 	}
+// 	40% {
+// 		border-bottom: 3px #647aa3 solid;
+// 	}
+// 	60% {
+// 		border-bottom: 3px #95b2b0 solid;
+// 	}
+// 	80% {
+// 		border-bottom: 3px #c6ebbe solid;
+// 	}
+// 	100% {
+// 		border-bottom: 3px #3640fc solid;
+// 	}
+// }
 
 .project-List {
 	display: flex;

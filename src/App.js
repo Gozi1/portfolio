@@ -9,16 +9,23 @@ import Contact from './components/Contact';
 
 function App() {
 	const [currentDisplay, setCurrentDisplay] = useState('About');
-	const [color, setColor] = useState('#252555');
+	const [color, setColor] = useState('linear-gradient(to right, #2b5876, #4e4376)');
 	function changeColor() {
 		//function to randomize the color and make sure the previos color is not the new random number.
+
 		const colors = [
-			'#160C28',
-			'#2F4B39',
-			'#1B190E',
-			'#121317',
-			'#1c0e0c',
-			'#252555',
+			// Roseanna
+			'linear-gradient(to right, #de6262, #ffb88c)',
+			// 50 shades of Grey
+			'linear-gradient(to right, #bdc3c7 ,  #2c3e50)',
+			// Green Beach
+			'linear-gradient(to right, #de6262, #ffb88c)',
+			// Socialive
+			'linear-gradient(to right, #06beb6 ,#48b1bf)',
+			// Dusk
+			'linear-gradient(to right, #ffd89b , #19547b)',
+			//Aubergine purple
+			'linear-gradient(to right, #aa076b , #61045f)',
 		];
 		const randomNum = () => {
 			let randomNumber = Math.floor(Math.random() * 5);
@@ -32,12 +39,14 @@ function App() {
 	}
 
 	useEffect(() => {
-		document.querySelector('*').style.backgroundColor = color;
-	}, []);
+		console.log(color);
+		document.querySelector('*').style.background=color;
+		// document.querySelector('*').style.backgroundImage = color;
+	}, [color]);
 	return (
-		<div className='App '>
+		<div className='App'  >
 			<Loadingscreen />
-			<main>
+			<main >
 				<Nav
 					currentDisplay={currentDisplay}
 					setCurrentDisplay={setCurrentDisplay}
@@ -58,7 +67,7 @@ function App() {
 					/>
 				</div>
 			</main>
-			<footer>© Samuel Nwabiani 2023</footer>
+			<footer>© Samuel Nwabiani 2024</footer>
 		</div>
 	);
 }

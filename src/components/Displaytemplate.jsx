@@ -9,7 +9,10 @@ import {
 	SiExpress,
 	SiNextdotjs,
 	SiPrisma,
-	SiGithub
+	SiGithub,
+	SiMongodb,
+	SiTypescript,
+	SiGraphql
 } from 'react-icons/si';
 const Displaytemplate = (props) => {
 	const iconObj = {
@@ -24,6 +27,9 @@ const Displaytemplate = (props) => {
 		nextjs: <SiNextdotjs />,
 		prisma: <SiPrisma />,
 		github: <SiGithub />,
+		mongodb: <SiMongodb />,
+		graphql: <SiGraphql />,
+		typescript: <SiTypescript />,
 	}
 	const { displayObj } = props;
 	const { title, description, techStack, img, project, github, site } =
@@ -52,12 +58,12 @@ const Displaytemplate = (props) => {
 					})}
 
 					{github && (
-						<li data-text ='View GitHub' className='site'><a  href={github} >
+						<li data-text ='View GitHub' className='site'><a  href={github} target="_blank">
 						{iconObj['github']}
 					</a></li>
 					)}
 					{site && (
-						<li className='site'><a  href={site}>
+						<li className='site'><a  href={site} target="_blank">
 						View Site
 					</a></li>
 					)}

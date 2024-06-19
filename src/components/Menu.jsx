@@ -5,15 +5,12 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 const Menu = (props) => {
 	const [drop, setDrop] = useState(false);
 	const { setCurrentDisplay, changeColor, color, currentDisplay, data } = props;
-
 	useEffect(() => {
-		document
-			.querySelector('*')
-			.animate([{ backgroundColor: color }], {
-				duration: 750,
-				'timing-function': 'easeIn',
-				fill: 'forwards',
-			});
+		document.querySelector('*').animate([{ backgroundColor: color }], {
+			duration: 750,
+			'timing-function': 'easeIn',
+			fill: 'forwards',
+		});
 		if (window.innerWidth <= 900) {
 			window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 		}
@@ -44,7 +41,8 @@ const Menu = (props) => {
 					Contact
 				</li>
 				<li>
-					<a href='Samuel_Nwabiani_Resume.pdf' download>
+			
+					<a href='https://flowcv.com/resume/jbvfgcke9s' target='_blank'>
 						Resume
 					</a>
 				</li>
@@ -62,7 +60,6 @@ const Menu = (props) => {
 				<div className={drop ? 'project-menu ' : 'hide'}>
 					{Object.entries(data).map(([key, value]) => {
 						if (value.project) {
-							console.log(key);
 							return (
 								<li
 									key={key}
