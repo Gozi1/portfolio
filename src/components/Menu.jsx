@@ -42,7 +42,7 @@ const Menu = (props) => {
 				</li>
 				<li>
 			
-					<a href='https://flowcv.com/resume/jbvfgcke9s' target='_blank'>
+					<a href='https://flowcv.com/resume/jbvfgcke9s' target='_blank' rel="noopener">
 						Resume
 					</a>
 				</li>

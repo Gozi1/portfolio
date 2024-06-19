@@ -58,12 +58,12 @@ const Displaytemplate = (props) => {
 					})}
 
 					{github && (
-						<li data-text ='View GitHub' className='site'><a  href={github} target="_blank">
+						<li data-text ='View GitHub' className='site'><a  href={github} target="_blank"   rel="noopener">
 						{iconObj['github']}
 					</a></li>
 					)}
 					{site && (
-						<li className='site'><a  href={site} target="_blank">
+						<li className='site'><a  href={site} target="_blank" rel="noopener">
 						View Site
 					</a></li>
 					)}

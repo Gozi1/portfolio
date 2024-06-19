@@ -120,13 +120,13 @@ const Nav = (props) => {
 					<a
 						href='https://www.linkedin.com/in/samuel-nwabiani/'
 						target='_blank'
-						rel='noreferrer'
+						rel="noopener"
 					>
 						<ImLinkedin2 />
 					</a>
 				</li>
 				<li>
-					<a href='https://github.com/Gozi1' target='_blank' rel='noreferrer'>
+					<a href='https://github.com/Gozi1' target='_blank' rel="noopener">
 						<ImGithub />
 					</a>
 				</li>
