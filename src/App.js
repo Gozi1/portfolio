@@ -26,6 +26,18 @@ function App() {
 			'linear-gradient(to right, #ffd89b , #19547b)',
 			//Aubergine purple
 			'linear-gradient(to right, #aa076b , #61045f)',
+			// Roseanna
+			'linear-gradient(to bottom, #de6262, #ffb88c)',
+			// 50 shades of Grey
+			'linear-gradient(to bottom, #bdc3c7 ,  #2c3e50)',
+			// Green Beach
+			'linear-gradient(to bottom, #de6262, #ffb88c)',
+			// Socialive
+			'linear-gradient(to bottom, #06beb6 ,#48b1bf)',
+			// Dusk
+			'linear-gradient(to bottom, #ffd89b , #19547b)',
+			//Aubergine purple
+			'linear-gradient(to bottom, #aa076b , #61045f)',
 		];
 
 		let previousColor = null;

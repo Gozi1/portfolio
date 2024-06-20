@@ -3,7 +3,8 @@ $white: #eff6ee;
 $dark: #02020A;
 $purple: #7209B7;
 
-$regularFont:'Lusitana', serif;
+$regularFont: 'Exo 2', sans-serif;
+$specialFont: 'Press Start 2P', system-ui;
 li{
   list-style: none;
 }
@@ -72,16 +73,8 @@ li{
 }
 @media (max-width: 900px) {
 .Nav{
-  overflow-y: visible;
-  margin:  3rem 0;
   width: 100%;
-  align-items: center;
-  .socials{
-    overflow-y: hidden;
-    margin: 0;
-    height: max-content;
-    padding: 1rem;
-    
-  }
+  display: block;
+  margin: 3rem 0 2rem 2rem;
 }
 }

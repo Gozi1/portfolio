@@ -12,7 +12,8 @@ import {
 	SiGithub,
 	SiMongodb,
 	SiTypescript,
-	SiGraphql
+	SiGraphql,
+	SiJavascript
 } from 'react-icons/si';
 const Displaytemplate = (props) => {
 	const iconObj = {
@@ -26,6 +27,7 @@ const Displaytemplate = (props) => {
 		express: <SiExpress />,
 		nextjs: <SiNextdotjs />,
 		prisma: <SiPrisma />,
+		javascript: <SiJavascript/>,
 		github: <SiGithub />,
 		mongodb: <SiMongodb />,
 		graphql: <SiGraphql />,

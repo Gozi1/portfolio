@@ -23,7 +23,7 @@ const Loadingscreen = () => {
 						r='53'
 						stroke='#EFF6EE'
 						strokeWidth='5'
-						stroke-linejoin='round'
+						strokeLinejoin='round'
 					/>
 				</g>
 				<defs>
