@@ -1,9 +1,9 @@
 const data = {
 	About: {
 		title: 'About',
-		description: `Hello, I’m Sam, and I’m a dude that makes things on the internet!
+		description: `Hello, I’m Sam, and I makes things on the internet!
 
-My journey as a Developer is a delightful mix of intuition(not google) and imaginative problem-solving(google). I believe in crafting not just functional, but also creating unique digital experiences. From developing robust e-commerce platforms to fortifying the digital realms of men against the unknown, I’m committed to making technology not only work but also makes you go  "that looks amaizng".
+My journey as a Developer is a delightful mix of intuition and imaginative problem-solving. I believe in crafting not just functional, but also creating unique digital experiences. From developing robust e-commerce platforms to fortifying the digital realms of men against the unknown, I’m committed to making technology not only work but also makes you go  "that looks amaizng".
     `,
 		img: 'https://media0.giphy.com/media/3oz8xALBEmIav48OYg/giphy.gif?cid=ecf05e475m73mz3jolt4qz4plp2sdqf77axl3nad0v95zmxb&rid=giphy.gif&ct=g',
 	},
